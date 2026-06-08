@@ -1,0 +1,9 @@
+streamlit
+streamlit-agraph
+numpy
+pandas
+matplotlib
+networkx
+plotly
+streamlit-plotly-events
+watchdog

@@ -1,0 +1,65 @@
+skill_id,skill_name,group,level,initial_mastery
+arithmetic,Arithmetic basics,Algebra,0,0.80
+fractions,Fractions,Algebra,1,0.65
+simplify_expression,Simplify expressions,Algebra,2,0.55
+simplify_polynomial,Simplify polynomials,Algebra,3,0.50
+solve_linear_equation,Solve linear equations,Algebra,2,0.60
+
+function_notation,Read function notation,Functions,0,0.70
+substitution,Substitute value into expression,Functions,1,0.60
+evaluate_function,Evaluate function,Functions,2,0.50
+sign_of_function,Determine sign of function,Functions,3,0.45
+
+power_rule,Power rule,Derivatives,1,0.55
+polynomial_derivative,Find polynomial derivative,Derivatives,2,0.45
+evaluate_derivative,Evaluate derivative,Derivatives,3,0.40
+
+root_concept,Root concept,Root finding,1,0.60
+check_sign_change,Check sign change,Root finding,4,0.45
+midpoint_formula,Midpoint formula,Root finding,2,0.75
+interval_update,Update bisection interval,Root finding,5,0.40
+bisection_step,Bisection step,Root finding,6,0.38
+
+fixed_point_formula,Fixed point formula,Root finding,3,0.45
+fixed_point_step,Fixed point step,Root finding,4,0.35
+contraction_check,Contraction check,Root finding,5,0.30
+
+newton_formula,Newton formula,Root finding,3,0.45
+newton_step,Newton step,Root finding,5,0.30
+newton_iteration,Newton iteration,Root finding,6,0.28
+
+matrix_entry,Read matrix entries,Matrices,0,0.70
+vector_basics,Vector basics,Matrices,0,0.65
+dot_product,Dot product,Matrices,1,0.55
+matrix_vector_product,Matrix-vector product,Matrices,2,0.45
+matrix_norm,Matrix norm,Matrices,3,0.40
+diagonal_dominance,Diagonal dominance,Matrices,4,0.35
+gaussian_elimination,Gaussian elimination,Matrices,5,0.35
+back_substitution,Back substitution,Matrices,6,0.30
+
+directed_graph,Directed graph,PageRank,0,0.65
+outdegree,Outdegree,PageRank,1,0.55
+distribute_weight,Distribute weight,PageRank,2,0.45
+transition_matrix,Build transition matrix,PageRank,3,0.35
+column_stochastic,Check column stochasticity,PageRank,4,0.35
+power_iteration,Power iteration,PageRank,5,0.30
+pagerank_step,PageRank step,PageRank,6,0.25
+
+mse_loss,MSE loss,Linear Regression,0,0.55
+least_squares,Least squares fit,Linear Regression,1,0.45
+normal_equation,Normal equation,Linear Regression,2,0.35
+linear_regression,Linear regression model,Linear Regression,3,0.30
+
+gradient_descent,Gradient descent,Optimization,1,0.30
+learning_rate_tuning,Learning rate tuning,Optimization,2,0.25
+
+polynomial_form,Polynomial form,Interpolation,0,0.65
+vandermonde_matrix,Vandermonde matrix,Interpolation,2,0.40
+lagrange_basis,Lagrange basis,Interpolation,3,0.35
+lagrange_polynomial,Lagrange polynomial,Interpolation,4,0.30
+
+piecewise_function,Piecewise function,Splines,1,0.50
+first_derivative_continuity,First derivative continuity,Splines,3,0.35
+second_derivative_continuity,Second derivative continuity,Splines,4,0.30
+natural_boundary,Natural boundary condition,Splines,4,0.35
+natural_spline,Natural cubic spline,Splines,5,0.25
