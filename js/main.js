@@ -3,9 +3,9 @@
  */
 
 const LEVELS = [
-    { 
-        id: 0, title: "Binary Foundations", level: "Beginner", desc: "The heartbeat of all computing is binary.",
-        x: 120, y: 880,
+    {
+        id: 0, spotIndices: [0], title: "Binary Foundations", level: "Beginner", desc: "The heartbeat of all computing is binary.",
+        x: 200, y: 200,
         pool: [
             { type: "slider", desc: "Convert binary 1011 to decimal.", answer: 11 },
             { type: "choice", desc: "What is 1 + 1 in binary?", choices: ["1", "10", "11", "100"], answer: "10" },
@@ -19,9 +19,9 @@ const LEVELS = [
             { type: "click", desc: "Click 8 times for one byte.", answer: 8 }
         ]
     },
-    { 
-        id: 1, title: "Pythonic Flow", level: "Beginner", desc: "Organize operations in the correct logical order.",
-        x: 220, y: 780,
+    {
+        id: 1, spotIndices: [1], title: "Pythonic Flow", level: "Beginner", desc: "Organize operations in the correct logical order.",
+        x: 350, y: 180,
         pool: [
             { type: "sort", desc: "Correct order for a script:", options: ["Initialize List", "Append Data", "Sort Collection", "Output Result"], answer: ["Initialize List", "Append Data", "Sort Collection", "Output Result"] },
             { type: "choice", desc: "Which symbol is used for comments in Python?", choices: ["//", "/*", "#", "--"], answer: "#" },
@@ -35,9 +35,9 @@ const LEVELS = [
             { type: "sort", desc: "Print a greeting:", options: ["Define message", "Call print()", "Pass message to print", "Execute"], answer: ["Define message", "Pass message to print", "Call print()", "Execute"] }
         ]
     },
-    { 
-        id: 2, title: "NumPy Dimensions", level: "Intermediate", desc: "Link powerful NumPy concepts to definitions.",
-        x: 320, y: 850,
+    {
+        id: 2, spotIndices: [2], title: "NumPy Dimensions", level: "Intermediate", desc: "Link powerful NumPy concepts to definitions.",
+        x: 500, y: 150,
         pool: [
             { type: "match", desc: "Match NumPy concepts:", pairs: { "Broadcasting": "Array shape alignment", "Axis": "Dimension index", "Slicing": "Subset selection", "Reshape": "Dimension change" } },
             { type: "choice", desc: "NumPy arrays are called...?", choices: ["Lists", "ndarrays", "Tensors", "Matrices"], answer: "ndarrays" },
@@ -51,9 +51,9 @@ const LEVELS = [
             { type: "choice", desc: "Standard NumPy import alias?", choices: ["num", "np", "nump", "numpy"], answer: "np" }
         ]
     },
-    { 
-        id: 3, title: "AI Architecture", level: "Intermediate", desc: "Outliers in the architecture of an LLM.",
-        x: 420, y: 750,
+    {
+        id: 3, spotIndices: [3], title: "AI Architecture", level: "Intermediate", desc: "Outliers in the architecture of an LLM.",
+        x: 650, y: 180,
         pool: [
             { type: "choice", desc: "Which is an outlier in LLM architecture?", choices: ["Attention Mechanism", "Transformer Block", "Steam Valve", "Token Embeddings"], answer: "Steam Valve" },
             { type: "slider", desc: "Typical temperature for creative text is around...", answer: 0.7 },
@@ -67,9 +67,9 @@ const LEVELS = [
             { type: "slider", desc: "Learning rate is usually a very... (0 for small, 1 for large)", answer: 0 }
         ]
     },
-    { 
-        id: 4, title: "Iteration Logic", level: "Beginner", desc: "Simulate loops and execute cycles.",
-        x: 520, y: 800,
+    {
+        id: 4, spotIndices: [4], title: "Iteration Logic", level: "Beginner", desc: "Simulate loops and execute cycles.",
+        x: 800, y: 200,
         pool: [
             { type: "click", desc: "Execute exactly 5 cycles!", answer: 5 },
             { type: "choice", desc: "What happens if a loop condition is always true?", choices: ["Error", "Skip", "Infinite Loop", "Zero cycles"], answer: "Infinite Loop" },
@@ -83,9 +83,9 @@ const LEVELS = [
             { type: "text", desc: "What do you call a loop inside another loop?", answer: "nested" }
         ]
     },
-    { 
-        id: 5, title: "Geometric Constants", level: "Beginner", desc: "Calculate area and properties of shapes.",
-        x: 620, y: 700,
+    {
+        id: 5, spotIndices: [5], title: "Geometric Constants", level: "Beginner", desc: "Calculate area and properties of shapes.",
+        x: 150, y: 400,
         pool: [
             { type: "slider", desc: "Area of unit circle (r=1, Pi=3.14).", answer: 3.14 },
             { type: "choice", desc: "Sum of angles in a triangle?", choices: ["90", "180", "270", "360"], answer: "180" },
@@ -99,9 +99,9 @@ const LEVELS = [
             { type: "slider", desc: "Radius is 5, diameter is...?", answer: 10 }
         ]
     },
-    { 
-        id: 6, title: "Logic Gates", level: "Beginner", desc: "Match Boolean operations to resulting states.",
-        x: 720, y: 750,
+    {
+        id: 6, spotIndices: [6], title: "Logic Gates", level: "Beginner", desc: "Match Boolean operations to resulting states.",
+        x: 350, y: 420,
         pool: [
             { type: "match", desc: "Boolean results:", pairs: { "T AND T": "True", "T OR F": "True", "T AND F": "False", "NOT T": "False" } },
             { type: "choice", desc: "Which gate is a 'flip'?", choices: ["AND", "OR", "NOT", "XOR"], answer: "NOT" },
@@ -115,9 +115,9 @@ const LEVELS = [
             { type: "choice", desc: "Which is the 'Inverse' gate?", choices: ["AND", "OR", "NOT", "XOR"], answer: "NOT" }
         ]
     },
-    { 
-        id: 7, title: "Algorithmic Speed", level: "Advanced", desc: "Rank Big-O complexities efficiently.",
-        x: 820, y: 600,
+    {
+        id: 7, spotIndices: [7], title: "Algorithmic Speed", level: "Advanced", desc: "Rank Big-O complexities efficiently.",
+        x: 500, y: 430,
         pool: [
             { type: "sort", desc: "Rank Big-O (fastest to slowest):", options: ["O(1)", "O(log n)", "O(n)", "O(n^2)"], answer: ["O(1)", "O(log n)", "O(n)", "O(n^2)"] },
             { type: "choice", desc: "Binary search complexity?", choices: ["O(1)", "O(n)", "O(log n)", "O(n log n)"], answer: "O(log n)" },
@@ -131,8 +131,8 @@ const LEVELS = [
             { type: "choice", desc: "What does Big-O measure?", choices: ["Exact time", "Memory only", "Upper bound growth", "Average speed"], answer: "Upper bound growth" }
         ]
     },
-    { 
-        id: 8, title: "Data Structures", level: "Advanced", desc: "Pair structures with governing principles.",
+    {
+        id: 8, spotIndices: [8], title: "Data Structures", level: "Advanced", desc: "Pair structures with governing principles.",
         x: 850, y: 450,
         pool: [
             { type: "match", desc: "Governing principles:", pairs: { "Stack": "LIFO", "Queue": "FIFO", "Hash Map": "O(1) Access", "Tree": "Hierarchical" } },
@@ -147,9 +147,9 @@ const LEVELS = [
             { type: "choice", desc: "A set differs from a list because it only contains...?", choices: ["Numbers", "Unique values", "Strings", "Tuples"], answer: "Unique values" }
         ]
     },
-    { 
-        id: 9, title: "Slicing Logic", level: "Intermediate", desc: "Analyze slice outputs of lists.",
-        x: 700, y: 350,
+    {
+        id: 9, spotIndices: [9], title: "Slicing Logic", level: "Intermediate", desc: "Analyze slice outputs of lists.",
+        x: 850, y: 400,
         pool: [
             { type: "choice", desc: "L = [10, 20, 30, 40]. L[1:3] is...?", choices: ["[10, 20]", "[20, 30]", "[20, 30, 40]", "[10, 20, 30]"], answer: "[20, 30]" },
             { type: "slider", desc: "L = [0,1,2,3]. L[-1] is...", answer: 3 },
@@ -163,9 +163,9 @@ const LEVELS = [
             { type: "slider", desc: "L = [1,2,3,4,5]. L[1:4] has how many elements?", answer: 3 }
         ]
     },
-    { 
-        id: 10, title: "Functional Flow", level: "Intermediate", desc: "Order the lifecycle of a function call.",
-        x: 500, y: 300,
+    {
+        id: 10, spotIndices: [10], title: "Functional Flow", level: "Intermediate", desc: "Order the lifecycle of a function call.",
+        x: 200, y: 700,
         pool: [
             { type: "sort", desc: "Lifecycle of a call:", options: ["Definition", "Invocation", "Execution", "Return"], answer: ["Definition", "Invocation", "Execution", "Return"] },
             { type: "choice", desc: "A function that calls itself is...?", choices: ["Iterative", "Recursive", "Linear", "Static"], answer: "Recursive" },
@@ -179,9 +179,9 @@ const LEVELS = [
             { type: "choice", desc: "Which of these is a built-in Python function?", choices: [" print()", " run()", " execute()", " start()"], answer: " print()" }
         ]
     },
-    { 
-        id: 11, title: "The Summit", level: "Advanced", desc: "Ultimate challenge of knowledge.",
-        x: 400, y: 150,
+    {
+        id: 11, spotIndices: [11], title: "The Summit", level: "Advanced", desc: "Ultimate challenge of knowledge.",
+        x: 500, y: 720,
         pool: [
             { type: "slider", desc: "Sum of first 10 natural numbers.", answer: 55 },
             { type: "choice", desc: "Complexity of finding an element in a sorted array?", choices: ["O(n)", "O(1)", "O(log n)", "O(n^2)"], answer: "O(log n)" },
@@ -195,6 +195,39 @@ const LEVELS = [
             { type: "slider", desc: "The value of e (approx)?", answer: 2.72 }
         ]
     },
+    {
+        id: 12, spotIndices: [12, 13, 14, 15, 16, 17, 18, 19],
+        title: "Diagnostics",
+        level: "Diagnostic",
+        desc: "Twenty interactive challenges across programming, math and reasoning.",
+        x: 500, y: 500,
+        alwaysAvailable: true,
+        excludeFromMapCompletion: true,
+        count: 20,
+        passMark: 11,
+        pool: [
+            { type: "interactive", mechanic: "numberBins", title: "Q1: Classify Numbers", desc: "Classify numbers into prime, divisible by 3, or neither." },
+            { type: "interactive", mechanic: "lineThroughPts", title: "Q2: Line Through Points", desc: "Set slope and intercept to pass through 2 points." },
+            { type: "interactive", mechanic: "shapeArea", title: "Q3: Rectangle Constraints", desc: "Set sides to hit both area and perimeter targets." },
+            { type: "interactive", mechanic: "sequenceRule", title: "Q4: Range Checker", desc: "Classify values into correct zones based on thresholds." },
+            { type: "interactive", mechanic: "sequencePairs", title: "Q5: Expression Tree", desc: "Build expressions satisfying all constraints." },
+            { type: "interactive", mechanic: "handSort", title: "Q6: Min Swaps Sort", desc: "Sort via adjacent swaps in minimum count." },
+            { type: "interactive", mechanic: "dictContract", title: "Q7: Sequence Pairs", desc: "Find pairs of numbers with matching sums." },
+            { type: "interactive", mechanic: "quadraticThroughPts", title: "Q8: Polynomial Vis", desc: "Set a, b, c so the parabola passes through 3 points." },
+            { type: "interactive", mechanic: "loopOrder", title: "Q9: Paint Order", desc: "Click cells in the exact order the code will paint them." },
+            { type: "interactive", mechanic: "sliceBuilder", title: "Q10: Angle Range", desc: "Build a slice notation [a:b:c] yielding the target." },
+            { type: "interactive", mechanic: "listTransform", title: "Q11: Equation Coeff", desc: "Order operations to reach the target state." },
+            { type: "interactive", mechanic: "stringEqualize", title: "Q12: String Transform", desc: "Chain string operations to match the target." },
+            { type: "interactive", mechanic: "blackBoxPipeline", title: "Q13: Black Box", desc: "Probe the hidden function and rebuild the pipeline." },
+            { type: "interactive", mechanic: "numberRoute", title: "Q14: Pathfinding", desc: "Route through grid of operations to reach target." },
+            { type: "interactive", mechanic: "listTransform", title: "Q15: String v2", desc: "Work with string transformations (advanced)." },
+            { type: "interactive", mechanic: "xorCircuit", title: "Q16: XOR Circuit", desc: "Wire AND, OR, NOT gates to match XOR truth table." },
+            { type: "interactive", mechanic: "threePlanets", title: "Q17: Three Planets", desc: "Set periods so planets reunite at 105 & pairwise coprime." },
+            { type: "interactive", mechanic: "catchBits", title: "Q18: Binary Operations", desc: "Toggle bits to satisfy two bitwise constraints." },
+            { type: "interactive", mechanic: "growthBuilder", title: "Q19: Build Growth", desc: "Place operations in loops to match the count table." },
+            { type: "interactive", mechanic: "divAutomaton", title: "Q20: Divisibility", desc: "Build a DFA recognizing multiples of 3 in binary." }
+        ]
+    }
 ];
 
 const STATE = {
@@ -207,7 +240,8 @@ const STATE = {
     levelCorrectCount: 0,
     currentAnswer: null,
     tutorialStep: 0,
-    darkMode: false
+    darkMode: false,
+    _mechCleanup: null
 };
 
 class SoundManager {
@@ -371,20 +405,28 @@ function initGame() {
 
 function updateMapImage() {
     const mapImg = document.getElementById('map-image');
-    const count = STATE.claimedSpots.length;
-    if (count === LEVELS.length) {
-        mapImg.src = `assets/images/map_12.png`;
+    const requiredLevels = LEVELS.filter(l => !l.excludeFromMapCompletion).length;
+    const claimedRequired = STATE.claimedSpots.filter(idx => !LEVELS[idx].excludeFromMapCompletion).length;
+
+    let mapSrc;
+    if (claimedRequired === 0) {
+        mapSrc = 'assets/images/vybarvena_mapa.png';
+    } else if (claimedRequired <= 11) {
+        mapSrc = `assets/images/vybarvena_mapa${claimedRequired}.png`;
     } else {
-        mapImg.src = `assets/images/map_0.png`;
+        mapSrc = 'assets/images/map_end.png';
     }
+
+    mapImg.src = mapSrc;
 }
+
 
 function updateQuestLog() {
     const container = document.getElementById('log-container');
     container.innerHTML = "";
     LEVELS.forEach((l, i) => {
         const isClaimed = STATE.claimedSpots.includes(i);
-        const isAvailable = i === 0 || STATE.claimedSpots.includes(i - 1);
+        const isAvailable = l.alwaysAvailable || i === 0 || STATE.claimedSpots.includes(i - 1);
         const card = document.createElement('div');
         card.className = `syllabus-card ${isClaimed ? 'claimed' : ''} ${!isAvailable ? 'locked' : ''}`;
         card.innerHTML = `
@@ -409,7 +451,8 @@ const modal = document.getElementById('modal');
 const modalUI = document.getElementById('modal-ui');
 
 function openLevel(idx) {
-    if (idx > 0 && !STATE.claimedSpots.includes(idx - 1)) {
+    const lvl = LEVELS[idx];
+    if (!lvl.alwaysAvailable && idx > 0 && !STATE.claimedSpots.includes(idx - 1)) {
         alert("This area is still locked. Please claim the previous spot first!");
         return;
     }
@@ -421,19 +464,28 @@ function openLevel(idx) {
     STATE.activeLevel = idx;
     STATE.currentQuestionIdx = 0;
     STATE.levelCorrectCount = 0;
-    
-    // Randomize questions: pick 5 from the pool
-    const pool = LEVELS[idx].pool;
-    STATE.activeQuestions = [...pool].sort(() => 0.5 - Math.random()).slice(0, 5);
-    
+
+    // Pick questions: if lvl.count, use all in fixed order; else pick 5 random
+    const pool = lvl.pool;
+    const count = lvl.count || 5;
+    STATE.activeQuestions = lvl.count
+        ? [...pool].slice(0, count)
+        : [...pool].sort(() => 0.5 - Math.random()).slice(0, count);
+
     loadQuestion();
 }
 
 function loadQuestion() {
+    // Clean up any previous mechanic
+    if (STATE._mechCleanup) {
+        STATE._mechCleanup();
+        STATE._mechCleanup = null;
+    }
+
     const level = LEVELS[STATE.activeLevel];
     const q = STATE.activeQuestions[STATE.currentQuestionIdx];
-    
-    document.getElementById('modal-title').innerText = `${level.title} - Question ${STATE.currentQuestionIdx + 1}/5`;
+
+    document.getElementById('modal-title').innerText = q.title || `${level.title} - Question ${STATE.currentQuestionIdx + 1}/${STATE.activeQuestions.length}`;
     document.getElementById('modal-desc').innerText = q.desc;
     document.getElementById('modal-feedback').innerText = "";
     STATE.currentAnswer = null;
@@ -574,6 +626,16 @@ function loadQuestion() {
         container.appendChild(input);
         modalUI.appendChild(container);
         STATE.currentAnswer = "";
+    } else if (q.type === 'interactive') {
+        STATE.currentAnswer = 'unsolved';
+        const mount = window.MECHANICS[q.mechanic];
+        if (mount) {
+            STATE._mechCleanup = mount(modalUI, q, (isSolved) => {
+                STATE.currentAnswer = isSolved ? 'solved' : 'unsolved';
+            });
+        } else {
+            modalUI.innerHTML = `<div style="color:var(--error);padding:20px;">Mechanic not found: ${q.mechanic}</div>`;
+        }
     }
 
     modal.classList.add('active');
@@ -605,6 +667,8 @@ document.getElementById('modal-submit').addEventListener('click', () => {
         correct = parseInt(STATE.currentAnswer) === q.answer;
     } else if (q.type === 'text') {
         correct = STATE.currentAnswer.toLowerCase() === q.answer.toLowerCase();
+    } else if (q.type === 'interactive') {
+        correct = STATE.currentAnswer === 'solved';
     }
 
     if (correct) {
@@ -626,10 +690,14 @@ document.getElementById('modal-submit').addEventListener('click', () => {
     setTimeout(() => {
         submitBtn.disabled = false;
         STATE.currentQuestionIdx++;
-        if (STATE.currentQuestionIdx < 5) {
+        const lvl = LEVELS[STATE.activeLevel];
+        const totalQuestions = STATE.activeQuestions.length;
+        const passMark = lvl.passMark || 3;
+
+        if (STATE.currentQuestionIdx < totalQuestions) {
             loadQuestion();
         } else {
-            const success = STATE.levelCorrectCount >= 3;
+            const success = STATE.levelCorrectCount >= passMark;
             if (success) {
                 alert(`Level Cleared! You solved ${STATE.levelCorrectCount}/5 correctly.`);
                 STATE.claimedSpots.push(levelIdx);
