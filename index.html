@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Quest | Leagues of Code × NOSCH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader-content">
+            <img src="assets/images/loc_logo.png" alt="LoC" style="height: 60px; margin-bottom: 20px;">
+            <div class="loader-bar"><div class="loader-progress"></div></div>
+            <p style="margin-top: 15px; font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">Initializing Knowledge Quest...</p>
+        </div>
+    </div>
+
+    <canvas id="tech-canvas"></canvas>
+
+    <header>
+        <div class="logo-container">
+            <img src="assets/images/loc_logo.png" alt="Leagues of Code" class="logo">
+            <img src="assets/images/nosch_logo.svg" alt="NOSCH" class="logo">
+        </div>
+        <div style="display: flex; align-items: center; gap: 1.5rem;">
+            <div id="theme-toggle" class="theme-toggle">
+                <span class="theme-icon">🌙</span>
+                <span style="font-size: 0.8rem; font-weight: 600;">Theme</span>
+            </div>
+            <div id="user-badge" style="font-weight: 600; font-size: 0.9rem; color: var(--text-muted);"></div>
+        </div>
+    </header>
+
+    <!-- Start Screen -->
+    <div id="start-screen" class="screen-overlay">
+        <div class="premium-card">
+            <h1>Knowledge Quest</h1>
+            <p>A professional assessment journey designed for the next generation of engineers. Prove your mastery of computing and mathematics.</p>
+            <div class="form-group">
+                <label for="user-name">Full Name</label>
+                <input type="text" id="user-name" placeholder="Enter your full name...">
+            </div>
+            <div class="form-group">
+                <label for="user-email">Institutional Email</label>
+                <input type="email" id="user-email" placeholder="name@example.com...">
+            </div>
+            <button class="btn-primary" id="start-btn">Begin Journey</button>
+        </div>
+    </div>
+
+    <!-- Tutorial Screen -->
+    <div id="tutorial-screen" class="screen-overlay hidden">
+        <div class="premium-card">
+            <div class="tutorial-step active">
+                <h2>Welcome, Explorer! 🚀</h2>
+                <p>Your goal is to navigate the Island of Knowledge and claim all 12 knowledge spots by solving challenges.</p>
+                <div style="font-size: 5rem; margin: 2rem 0; text-align: center;">🗺️</div>
+            </div>
+            <div class="tutorial-step">
+                <h2>How it Works 💡</h2>
+                <p>The map image is for decoration. To progress, use the <b>Knowledge Syllabus</b> on the right. Click on the available modules to start your quest!</p>
+                <div style="font-size: 5rem; margin: 2rem 0; text-align: center;">📜</div>
+            </div>
+            <div class="tutorial-step">
+                <h2>The Challenge 🧠</h2>
+                <p>Each level has 5 puzzles. You must solve at least <b>3 correctly</b> to claim the spot and unlock the next area. Precision is key!</p>
+                <div style="font-size: 5rem; margin: 2rem 0; text-align: center;">🧩</div>
+            </div>
+            <button class="btn-primary" id="tutorial-next">Continue</button>
+        </div>
+    </div>
+
+    <main>
+        <div class="map-viewport" id="map-viewport">
+            <!-- Dynamic Sequential Image -->
+            <img src="assets/images/map_0.png" id="map-image" alt="Knowledge Map">
+            
+            <svg id="map-svg" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+                <!-- Line removed as per request -->
+                <g id="spots-group"></g>
+            </svg>
+        </div>
+
+        <div class="curriculum-container">
+            <h2>📜 Knowledge Syllabus</h2>
+            <div id="log-container" class="quest-log">
+                <!-- Course cards injected here -->
+            </div>
+        </div>
+    </main>
+
+    <div class="modal-overlay" id="modal">
+    <div class="modal-content">
+        <button class="modal-close">×</button>
+        <h2 id="modal-title">Challenge</h2>
+        <p id="modal-desc">Description goes here...</p>
+        <div id="modal-feedback" style="height: 24px; margin-bottom: 10px; font-weight: 700; font-size: 1.1rem;"></div>
+        <div id="modal-ui" class="challenge-ui">
+            <!-- UI elements injected here -->
+        </div>
+        <button class="btn-primary" id="modal-submit">Submit Answer</button>
+    </div>
+    </div>
+
+    <footer>
+        <div class="footer-logos">
+            <img src="assets/images/loc_logo.png" alt="Leagues of Code">
+            <img src="assets/images/nosch_logo.svg" alt="NOSCH">
+        </div>
+        <div class="footer-text">
+            <strong>Střední odborná škola NET OFFICE</strong><br>
+            Developed by Students of NOSCH: Jan Šustek, Viktor Siwek, Leoš Seman a Filip Kašper
+        </div>
+        <div class="footer-links">
+            <a href="https://leaguesofcode.space/" target="_blank">Leagues of Code</a>
+            <a href="https://nosch.cz/" target="_blank">NOSCH</a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
